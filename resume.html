@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aarti Burman - Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: #e6e9ef;
+      padding: 20px 20px 40px;
+      color: #2d3436;
+      line-height: 1.5;
+    }
+    .download-bar {
+      max-width: 900px;
+      margin: 0 auto 14px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1a3a5c;
+      color: #fff;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+    .download-btn:hover { background: #2c5f8a; }
+    .download-btn img, .download-btn svg { width: 18px; height: 18px; }
+    .resume {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+      overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(135deg, #1a3a5c, #2c5f8a);
+      color: #fff;
+      padding: 40px 45px 35px;
+    }
+    .header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .header .title {
+      font-size: 16px;
+      font-weight: 400;
+      color: #b8d4f0;
+      margin-top: 5px;
+    }
+    .header .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 14px;
+      font-size: 14px;
+      color: #d0e2f3;
+    }
+    .header .contact span { display: flex; align-items: center; gap: 6px; }
+    .header .contact a { color: #b8d4f0; text-decoration: none; }
+    .header .contact a:hover { text-decoration: underline; }
+
+    .body { display: flex; }
+    .sidebar {
+      width: 250px;
+      background: #f4f7fb;
+      padding: 30px 25px;
+      flex-shrink: 0;
+    }
+    .main {
+      flex: 1;
+      padding: 30px 35px 30px 30px;
+    }
+
+    .section { margin-bottom: 28px; }
+    .section:last-child { margin-bottom: 0; }
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1a3a5c;
+      border-bottom: 2px solid #1a3a5c;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .sidebar .section-title { color: #1a3a5c; border-bottom-color: #c0d4e8; }
+
+    .skill-group { margin-bottom: 14px; }
+    .skill-group:last-child { margin-bottom: 0; }
+    .skill-group .label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1a3a5c;
+      margin-bottom: 4px;
+    }
+    .skill-group .items {
+      font-size: 13px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .exp-item { margin-bottom: 22px; }
+    .exp-item:last-child { margin-bottom: 0; }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px 12px;
+      margin-bottom: 3px;
+    }
+    .exp-header .company {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a3a5c;
+    }
+    .exp-header .role {
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+    }
+    .exp-header .dates {
+      font-size: 12px;
+      color: #888;
+      font-weight: 500;
+    }
+    .exp-item ul {
+      margin-top: 6px;
+      padding-left: 18px;
+      font-size: 13px;
+      color: #444;
+      line-height: 1.7;
+    }
+    .exp-item ul li { margin-bottom: 2px; }
+
+    .project-item { margin-bottom: 16px; }
+    .project-item:last-child { margin-bottom: 0; }
+    .project-item .name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a3a5c;
+    }
+    .project-item .tech {
+      font-size: 12px;
+      color: #777;
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+    .project-item ul {
+      padding-left: 18px;
+      font-size: 13px;
+      color: #444;
+      line-height: 1.7;
+    }
+    .project-item ul li { margin-bottom: 2px; }
+
+    .other-projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+      font-size: 13px;
+      color: #444;
+      margin-top: 6px;
+    }
+    .other-projects a {
+      color: #1a3a5c;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .other-projects a:hover { color: #2c5f8a; }
+
+    .edu-item {
+      font-size: 14px;
+      color: #444;
+    }
+    .edu-item .degree { font-weight: 600; color: #1a3a5c; }
+    .edu-item .meta { font-size: 13px; color: #777; margin-top: 2px; }
+
+    .summary {
+      font-size: 13.5px;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .ai-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .ai-tools span {
+      background: #e6edf6;
+      color: #1a3a5c;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 3px 12px;
+      border-radius: 12px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .download-bar { display: none; }
+      .resume {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+      }
+      .header { background: #1a3a5c !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .sidebar { background: #f4f7fb !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .ai-tools span { background: #e6edf6 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+    @media (max-width: 700px) {
+      .body { flex-direction: column; }
+      .sidebar { width: 100%; }
+      .header { padding: 30px 25px; }
+      .main { padding: 25px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="download-bar">
+    <button class="download-btn" onclick="window.print()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Download PDF
+    </button>
+  </div>
+  <div class="resume">
+      <div class="header">
+        <h1>Aarti Burman</h1>
+        <div class="title">Senior PHP/Laravel Developer | SaaS &amp; API Specialist | 8+ Years</div>
+        <div class="contact">
+          <span>&#x1f4cd; Jabalpur, India</span>
+          <span>&#x1f4de; +91-9685185488</span>
+          <span>&#x2709; aartiburman65@gmail.com</span>
+        </div>
+      </div>
+
+    <div class="body">
+      <div class="sidebar">
+        <div class="section">
+          <div class="section-title">Skills</div>
+          <div class="skill-group">
+            <div class="label">Backend</div>
+            <div class="items">PHP, Laravel (8–11), CodeIgniter (3/4), REST API, MVC, Livewire</div>
+          </div>
+          <div class="skill-group">
+            <div class="label">Frontend</div>
+            <div class="items">HTML5, CSS3, Bootstrap, Tailwind, JavaScript, jQuery, AJAX, Alpine.js</div>
+          </div>
+          <div class="skill-group">
+            <div class="label">Database &amp; Caching</div>
+            <div class="items">MySQL, Redis, Query Optimization, Migrations, Eloquent</div>
+          </div>
+          <div class="skill-group">
+            <div class="label">API &amp; Integrations</div>
+            <div class="items">Payment Gateways, Payin/Payout, Webhooks, Callbacks, SMTP Rotation</div>
+          </div>
+          <div class="skill-group">
+            <div class="label">DevOps &amp; Tools</div>
+            <div class="items">Git, Bitbucket, Docker, Postman, PhpSpreadsheet, PHPUnit</div>
+          </div>
+          <div class="skill-group">
+            <div class="label">Architecture</div>
+            <div class="items">Queues &amp; Jobs, Events &amp; Listeners, Service Providers, Repository Pattern, SOLID</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Education</div>
+          <div class="edu-item" style="margin-bottom:14px">
+            <div class="degree">Bachelor of Engineering (CSE)</div>
+            <div class="meta">SGBM Institute of Technology (RGPV) &middot; Graduated June 2016</div>
+            <div class="meta" style="color:#555;font-size:12px">6.9 CGPA &middot; Division 1 &middot; Jabalpur, MP</div>
+          </div>
+          <div class="edu-item">
+            <div class="degree">Higher Secondary (10+2)</div>
+            <div class="meta">St. Norbert G. H. School (MP Board) &middot; July 2009</div>
+            <div class="meta" style="color:#555;font-size:12px">Division 2 &middot; Jabalpur, MP</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="section">
+          <div class="section-title">Professional Summary</div>
+          <p class="summary">
+            Experienced PHP/Laravel Developer with 8+ years of experience designing and building scalable SaaS platforms, eCommerce applications, and custom web solutions. Deep expertise in Laravel (8–11), CodeIgniter, REST APIs, payment gateway integrations, webhooks, Redis caching, queue management, and database optimization. Proficient in leveraging AI-assisted tools for code optimization, debugging, architecture planning, and documentation.
+          </p>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Experience</div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="company">Gounicrew</span>
+              <span class="role">Senior Software Engineer (SSE)</span>
+              <span class="dates">Dec 2025 – Present</span>
+            </div>
+            <ul>
+              <li>Developing scalable backend solutions using Laravel 11, PHP 8, MySQL, Redis, and REST APIs.</li>
+              <li>Building a Payment Gateway Aggregator Platform with RBAC (Master Admin, Admin, Merchant, User).</li>
+              <li>Implementing international Payin/Payout integrations for Brazil, Philippines, Pakistan, and Vietnam.</li>
+              <li>Managing API Integration, Webhook/Callback Handling, Transaction Reconciliation with queue jobs.</li>
+              <li>Designing secure APIs with Laravel Sanctum authentication, Form Request validation, and Eloquent API Resources.</li>
+              <li>Working on Nepoora eCommerce Platform — Product Management, Cart System, Order Processing, and REST APIs.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="company">AIONINNO Technologies Pvt. Ltd</span>
+              <span class="role">PHP Laravel Developer</span>
+              <span class="dates">Aug 2024 – Nov 2025</span>
+            </div>
+            <ul>
+              <li>Developed multi-tenant SaaS modules for HRMS, CRM, and Subscription Platforms.</li>
+              <li>Integrated payment gateway workflows with Stripe/Razorpay and external REST APIs.</li>
+              <li>Implemented SMTP rotation and email queuing via Laravel Jobs and Mailables.</li>
+              <li>Built import/export functionality using PhpSpreadsheet with chunked processing.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="company">Ilogitek Business Solutions</span>
+              <span class="role">Software Developer</span>
+              <span class="dates">Sept 2023 – Mar 2024</span>
+            </div>
+            <ul>
+              <li>Developed Laravel-based web applications with Blade templating and jQuery frontend.</li>
+              <li>Built Product Management Systems, Lead Tracking Modules, and RESTful Backend APIs.</li>
+              <li>Implemented role-based access control and data export functionality.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="company">Codemeg Soft Solution Pvt. Ltd</span>
+              <span class="role">PHP Developer</span>
+              <span class="dates">Sept 2021 – Aug 2023</span>
+            </div>
+            <ul>
+              <li>Developed enterprise web apps with Laravel, CodeIgniter 4, and PHP.</li>
+              <li>Created reusable modules and optimized legacy applications.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="company">Jump Online Solution</span>
+              <span class="role">PHP Developer</span>
+              <span class="dates">Aug 2017 – Aug 2021</span>
+            </div>
+            <ul>
+              <li>Built CMS Platforms, eCommerce Websites, and Custom PHP Applications.</li>
+              <li>Developed and maintained Laravel-based applications.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Projects</div>
+
+          <div class="project-item">
+            <div class="name">Payment Gateway Aggregator Platform</div>
+            <div class="tech">Laravel 11 | PHP 8 | MySQL | Redis | REST API | Queue Jobs</div>
+            <ul>
+              <li>SaaS-based multi-tenant payment platform with RBAC (Master Admin, Admin, Merchant, User).</li>
+              <li>Integrated international Payin/Payout APIs via third-party gateways with webhook verification and callback handling.</li>
+              <li>Implemented Laravel Queues &amp; Jobs for async transaction processing and reconciliation.</li>
+              <li>Built real-time transaction status updates using Events &amp; Listeners and database notifications.</li>
+              <li>Designed scalable MySQL schema with optimized indexes, relationships, and query caching via Redis.</li>
+            </ul>
+          </div>
+
+          <div class="project-item">
+            <div class="name">Nepoora eCommerce Platform</div>
+            <div class="tech">Laravel 11 | PHP 8 | MySQL | Redis | REST API | Livewire</div>
+            <ul>
+              <li>Developed full backend module suite — Products, Categories, Inventory, Customers, Orders, Cart.</li>
+              <li>Built RESTful APIs for mobile/web frontend with Laravel API Resources and Fractal transformation.</li>
+              <li>Implemented Redis caching for product listings and session management for performance.</li>
+              <li>Designed Eloquent relationships and database migrations for scalable architecture.</li>
+            </ul>
+          </div>
+
+          <div class="project-item">
+            <div class="name">Other Projects</div>
+            <div class="other-projects">
+              <span>LeadTracker CRM</span>
+              <a href="http://qualitydevelopers.co.nz/" target="_blank">Quality Developers</a>
+              <a href="https://fryconindia.com/homepage" target="_blank">Frycon India</a>
+              <a href="https://www.nashmi.com/mainhomepage" target="_blank">Nashmi</a>
+              <span>Rise4Girl</span>
+              <span>ShaadiConnect</span>
+              <span>Apakarnam</span>
+              <span>Swamiseva</span>
+              <span>AnEyeForArt</span>
+              <span>HRLogix</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">AI Development Tools</div>
+          <div class="ai-tools">
+            <span>ChatGPT</span>
+            <span>DeepSeek</span>
+            <span>Gemini</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

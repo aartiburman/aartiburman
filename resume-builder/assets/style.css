@@ -1,0 +1,180 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background: #e6e9ef;
+  color: #2d3436;
+  line-height: 1.6;
+  padding: 30px 20px;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  padding: 40px 45px;
+}
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.header h1 { font-size: 28px; color: #1a3a5c; }
+.header p { font-size: 14px; color: #777; margin-top: 5px; }
+
+.alert {
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.alert-success { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+.alert-error { background: #fde8e8; color: #991b1b; border: 1px solid #fecaca; }
+
+.form-columns { display: flex; gap: 35px; align-items: flex-start; }
+.form-main { flex: 1; }
+.form-sidebar { width: 280px; flex-shrink: 0; }
+
+.section-title {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1a3a5c;
+  border-bottom: 2px solid #1a3a5c;
+  padding-bottom: 6px;
+  margin: 25px 0 14px;
+}
+.section-title:first-of-type { margin-top: 0; }
+
+.form-row { display: flex; gap: 16px; }
+.form-row .form-group { flex: 1; }
+.form-group { margin-bottom: 14px; }
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 4px;
+}
+.sub-label { font-size: 12px !important; color: #666 !important; }
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  background: #fafafa;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #1a3a5c;
+  background: #fff;
+}
+textarea { resize: vertical; }
+
+.upload-section {
+  background: #f4f7fb;
+  border: 2px dashed #c0d4e8;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.upload-label {
+  display: inline-block;
+  cursor: pointer;
+  background: #1a3a5c;
+  color: #fff;
+  padding: 10px 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.upload-label:hover { background: #2c5f8a; }
+.upload-label input { display: none; }
+.upload-hint { display: block; font-size: 12px; color: #888; margin-top: 8px; }
+
+.exp-block, .proj-block {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+.btn-remove {
+  background: none;
+  border: 1px solid #e5e7eb;
+  color: #dc2626;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.btn-remove:hover { background: #fef2f2; }
+.btn-add {
+  background: none;
+  border: 1px dashed #1a3a5c;
+  color: #1a3a5c;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+}
+.btn-add:hover { background: #f0f4fa; }
+
+.template-picker { margin-bottom: 25px; }
+.template-option {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.template-option input { display: none; }
+.template-card {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 14px;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.template-option input:checked + .template-card {
+  border-color: #1a3a5c;
+  background: #f0f4fa;
+  box-shadow: 0 0 0 2px rgba(26,58,92,0.15);
+}
+.template-card strong { font-size: 14px; color: #1a3a5c; }
+.template-card span { font-size: 12px; color: #888; }
+
+.template-card .template-preview { margin-bottom: 4px; }
+
+.btn-generate {
+  width: 100%;
+  background: linear-gradient(135deg, #1a3a5c, #2c5f8a);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btn-generate:hover { opacity: 0.9; }
+
+@media (max-width: 800px) {
+  .form-columns { flex-direction: column-reverse; }
+  .form-sidebar { width: 100%; }
+  .container { padding: 25px 20px; }
+  .form-row { flex-direction: column; gap: 0; }
+}

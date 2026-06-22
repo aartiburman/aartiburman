@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aarti Burman - Cover Letter</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: #e6e9ef;
+      padding: 20px 20px 40px;
+      color: #2d3436;
+      line-height: 1.6;
+    }
+    .download-bar {
+      max-width: 800px;
+      margin: 0 auto 14px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1a3a5c;
+      color: #fff;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+    .download-btn:hover { background: #2c5f8a; }
+    .download-btn svg { width: 18px; height: 18px; }
+    .letter {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+      padding: 50px 55px;
+    }
+    .letter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 35px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #1a3a5c;
+    }
+    .letter-header .name {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a3a5c;
+    }
+    .letter-header .name span { font-size: 14px; font-weight: 400; color: #555; display: block; margin-top: 2px; }
+    .letter-header .contact {
+      text-align: right;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.7;
+    }
+    .letter-header .contact a { color: #1a3a5c; text-decoration: none; }
+    .letter-header .contact a:hover { text-decoration: underline; }
+    .date { font-size: 14px; color: #555; margin-bottom: 25px; }
+    .greeting { font-size: 15px; margin-bottom: 18px; }
+    .greeting strong { color: #1a3a5c; }
+    .body-text { font-size: 14px; color: #444; margin-bottom: 18px; text-align: justify; }
+    .body-text strong { color: #1a3a5c; }
+    .closing { margin-top: 30px; }
+    .closing .signoff { font-size: 14px; color: #444; margin-bottom: 20px; }
+    .closing .signature { font-size: 16px; font-weight: 700; color: #1a3a5c; }
+    .closing .sub { font-size: 13px; color: #777; margin-top: 2px; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #1a3a5c;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    @media print {
+      body { background: #fff; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .download-bar { display: none; }
+      .letter { box-shadow: none; border-radius: 0; padding: 40px 50px; max-width: 100%; }
+      .back-link { display: none; }
+    }
+    @media (max-width: 600px) {
+      .letter { padding: 30px 25px; }
+      .letter-header { flex-direction: column; gap: 10px; }
+      .letter-header .contact { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="download-bar">
+    <button class="download-btn" onclick="window.print()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Download PDF
+    </button>
+  </div>
+
+  <div class="letter">
+    <div class="letter-header">
+      <div class="name">
+        Aarti Burman
+        <span>PHP | Laravel | CodeIgniter Developer</span>
+      </div>
+      <div class="contact">
+        Jabalpur, India<br>
+        +91-9685185488<br>
+        aartiburman65@gmail.com
+      </div>
+    </div>
+
+    <div class="date">June 21, 2026</div>
+
+    <div class="greeting">Dear <strong>Hiring Manager</strong>,</div>
+
+    <p class="body-text">
+      I am writing to express my strong interest in the <strong>Senior PHP/Laravel Developer</strong> position. With over <strong>8 years of hands-on experience</strong> designing and building scalable SaaS platforms, eCommerce applications, and custom web solutions, I am confident in my ability to deliver high-quality results and contribute immediately to your engineering team.
+    </p>
+
+    <p class="body-text">
+      Throughout my career, I have specialized in <strong>Laravel (8–11), CodeIgniter, REST API development, payment gateway integrations, and database optimization</strong>. Currently, at <strong>Gounicrew</strong>, I am developing a multi-tenant Payment Gateway Aggregator Platform with Role-Based Access Control (RBAC), international Payin/Payout integrations for countries including Brazil, Philippines, Pakistan, and Vietnam, and a full eCommerce backend for the Nepoora platform. I work extensively with <strong>Laravel Queues &amp; Jobs, Redis caching, Events &amp; Listeners, and Eloquent ORM</strong> to build performant, maintainable systems.
+    </p>
+
+    <p class="body-text">
+      Previously, at <strong>AIONINNO Technologies</strong>, I built multi-tenant SaaS modules for HRMS and CRM platforms, integrated Stripe/Razorpay payment workflows, implemented SMTP rotation with queued email delivery, and built import/export engines using PhpSpreadsheet. At <strong>Ilogitek Business Solutions</strong> and earlier roles, I delivered Laravel-based business applications, product management systems, and lead tracking modules.
+    </p>
+
+    <p class="body-text">
+      Beyond my technical skills, I am highly proficient in leveraging <strong>AI-assisted development tools</strong> — including ChatGPT, DeepSeek, and Gemini — for code optimization, debugging, architecture planning, and documentation, which significantly accelerates delivery without compromising quality.
+    </p>
+
+    <p class="body-text">
+      I am excited about the opportunity to bring my experience in <strong>SaaS architecture, API design, payment systems, and scalable backend development</strong> to your organization. I am available for an interview at your earliest convenience and look forward to discussing how my skills align with your team's goals.
+    </p>
+
+    <div class="closing">
+      <p class="body-text">
+        Thank you for your time and consideration.
+      </p>
+      <div class="signoff">Best regards,</div>
+      <div class="signature">Aarti Burman</div>
+      <div class="sub">Senior PHP/Laravel Developer</div>
+    </div>
+
+    <a class="back-link" href="resume.html">&larr; Back to Resume</a>
+  </div>
+</body>
+</html>
